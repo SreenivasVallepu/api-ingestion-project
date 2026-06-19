@@ -1,6 +1,8 @@
 from flask import Flask
 import requests
 from google.cloud import storage
+from datetime import datetime
+
 
 app = Flask(__name__)
 
@@ -17,7 +19,11 @@ def ingest():
 
     bucket = client.bucket(BUCKET_NAME)
 
-    blob = bucket.blob("raw/posts.json")
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    blob = bucket.blob(
+        f"raw/posts_{timestamp}.json"
+    )
 
     blob.upload_from_string(
         response.text,
