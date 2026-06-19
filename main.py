@@ -6,7 +6,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-BUCKET_NAME = "sreenu-raw-data-bucket"
+BUCKET_NAME = "sreenu-api-raw-bucket"
 
 @app.route("/")
 def ingest():
