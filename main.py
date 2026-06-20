@@ -11,7 +11,7 @@ BUCKET_NAME = "sreenu-api-raw-bucket"
 @app.route("/")
 def ingest():
 
-    url = "https://dummyjson.com/products?limit=100&skip=200"
+    url = "https://dummyjson.com/products?limit=10000&skip=200"
 
     response = requests.get(url)
 
