@@ -22,7 +22,7 @@ def ingest():
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     blob = bucket.blob(
-        f"raw/posts_{timestamp}.json"
+        f"raw/products_{timestamp}.json"
     )
 
     blob.upload_from_string(
