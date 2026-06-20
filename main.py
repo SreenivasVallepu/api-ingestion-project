@@ -11,7 +11,7 @@ BUCKET_NAME = "sreenu-api-raw-bucket"
 @app.route("/")
 def ingest():
 
-    url = "https://jsonplaceholder.typicode.com/posts"
+    url = "https://dummyjson.com/products"
 
     response = requests.get(url)
 
